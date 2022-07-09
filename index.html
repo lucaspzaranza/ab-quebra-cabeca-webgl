@@ -8,19 +8,23 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
+    <!-- <div id="unity-container" class="unity-desktop"> -->
+    <div id="unity-container" style="width: 99.5%; height: 99.5%">
+      <!-- <canvas id="unity-canvas" width=960 height=600></canvas> -->
+      <canvas id="unity-canvas" width="auto" height="auto"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
-      <div id="unity-warning"> </div>
-      <div id="unity-footer">
-        <!-- <div id="unity-webgl-logo"></div> -->
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Quebra-Cabeças</div>
+      <div style="display: none;">
+        <div id="unity-warning"> </div>
+        <div id="unity-footer">
+          <div id="unity-webgl-logo"></div>
+          <div id="unity-fullscreen-button"></div>
+          <div id="unity-build-title">Quebra-Cabeças</div>
+        </div>
       </div>
     </div>
     <script>
@@ -82,8 +86,11 @@
         config.devicePixelRatio = 1;
         unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        // canvas.style.width = "960px";
+        // canvas.style.height = "600px";
+
+        canvas.style.width = "99.5%";
+        canvas.style.height = "99.5%";
       }
       loadingBar.style.display = "block";
 
